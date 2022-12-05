@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table id="newid">
+
+    </table>
+    <script src="date.js"></script>
+    <script>       
+        var datePicker1 = new datePicker("newid", () => {
+            console.log("function are running");
+        })
+        datePicker1.render(new Date("July 4, 1776"))
+    </script>
+</body>
+
+</html>

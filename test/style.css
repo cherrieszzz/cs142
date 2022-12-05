@@ -1,0 +1,10 @@
+#newid {
+    width: 30rem;
+    /* border: 1px saddlebrown solid; */
+}
+
+#newid td {
+    width: 13.28%;
+    float: left;
+    border: 1px solid;
+}

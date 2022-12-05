@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 150px;
+    border-left: 10px dotted rgb(208,208,255);
+    font-size:  40px;
+    margin-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(238,239,242);
+    
+}
+
+.a {
+    background-color: yellow;
+    color: rgb(218,165,31);
+}
+
+.f {
+   position: fixed;
+   bottom: 0;
+   right: 0; 
+}
