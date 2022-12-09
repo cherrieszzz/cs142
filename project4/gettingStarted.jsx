@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/main.css';
-
+import Header from './components/header'
 import Example from './components/example/Example';
 
 ReactDOM.render(
-  <Example />,
+  <>
+  <Header />
+  <Example />
+  
+  </>,
+  
   document.getElementById('reactapp'),
 );

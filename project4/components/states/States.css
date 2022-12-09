@@ -4,3 +4,39 @@ CSS for the CS142 project #4 Problem #2 states component
 Since CSS uses a global name space for classes we should use names starting with
 cs142-states- here.
 */
+
+.States {
+
+}
+
+.search {
+    margin-top: 3rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchbar {
+    width: 20rem;
+    border-radius: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.searchbtn {
+    border-radius: 50px;
+}
+
+.States ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.States ul li {
+    margin-right: 2rem;
+}

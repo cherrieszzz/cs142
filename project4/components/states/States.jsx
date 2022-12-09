@@ -14,42 +14,42 @@ class States extends React.Component {
 
   state = {
     value: '',
-    resultValue:null
+    resultValue: null
   }
 
   handChange = (e) => {
     this.setState({
-      value : e.target.value
+      value: e.target.value
     })
   }
 
   handClick = () => {
     this.setState({
-      resultValue:this.state.value
+      resultValue: this.state.value
     })
   }
 
   getResults(str) {
     var model = window.cs142models.statesModel();
     // 没有解决获取input值得问题，str应为input得值
-    return this.getInsert(str,model);
+    return this.getInsert(str, model);
   }
 
   getInsert(str, array) {
     var newArray = [];
-    if(str == null) {
+    if (str == null) {
       return array;
     } else {
-      for(var i =0; i < array.length; i++) {
-        if(this.isSame(str,array[i])) {
+      for (var i = 0; i < array.length; i++) {
+        if (this.isSame(str, array[i])) {
           newArray.push(array[i])
         }
       }
     }
-    if(newArray.length == 0) {
+    if (newArray.length == 0) {
       return ['There is no result']
     }
-    if(newArray == null) {
+    if (newArray == null) {
       return ['Please input some words']
     }
     return newArray;
@@ -57,15 +57,15 @@ class States extends React.Component {
 
   isSame(str1, str2) {
     var index = 0;
-    for(var i = 0; i < str1.length; i ++) {
-      for(var j =0;j < str2.length; j++) {
-        if(str1.charAt(i) == str2.charAt(j)) {
-          index ++;
+    for (var i = 0; i < str1.length; i++) {
+      for (var j = 0; j < str2.length; j++) {
+        if (str1.charAt(i) == str2.charAt(j)) {
+          index++;
           break;
         }
       }
     }
-    if(index >= str1.length) {
+    if (index >= str1.length) {
       return true
     } else {
       return false
@@ -74,16 +74,21 @@ class States extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>CS142 Project #4, Problem #2</p>
-        <input type='text' value={this.state.value} onChange={this.handChange}></input>
-        <input type='submit' onClick={this.handClick}></input>
-        <br/>
-        {
-          this.getResults(this.state.resultValue).map((key) => {
-            return <li key={key}>{key}</li>
-          })
-        }
+      <div className='States'>
+        <div className='search'>
+          <input type='text' value={this.state.value} onChange={this.handChange} className='searchbar'></input>
+          <input type='submit' onClick={this.handClick} className='searchbtn'></input>
+        </div>
+
+        <br />
+        <ul>
+          {
+            this.getResults(this.state.resultValue).map((key) => {
+              return <li key={key}>{key}</li>
+            })
+          }
+        </ul>
+
       </div>
     );
   }
