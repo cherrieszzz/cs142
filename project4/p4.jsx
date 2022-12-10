@@ -1,21 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import P4 from './components/p4/p4'
 
-class p4 extends Component {
-    state = {  } 
-
-    handleClick(flag) {
-        if(flag) {
-            
-        }
-    }
-    render() { 
-        return (    
-            <>
-            
-            </>
-        );
-    }
-}
- 
-export default p4;
+ReactDOM.render(
+  <P4 />,  
+  document.getElementById('reactapp'),
+);

@@ -20,3 +20,5 @@ cs142models.exampleModel = function() {
    };
 };
 
+export default cs142models
+

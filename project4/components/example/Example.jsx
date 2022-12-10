@@ -1,6 +1,6 @@
 import React from 'react';
 import './Example.css';
-
+import cs142models from '../../modelData/example';
 /*
   Since this component shows code we include the https://prismjs.com/
   formatter. We invoke it by labelling code blocks with class="language-jsx"
@@ -22,7 +22,7 @@ class Example extends React.Component {
     // We can initialize it here.
     // We read the example model data into the state variable 'name'
     this.state = {
-      name: window.cs142models.exampleModel().name,
+      name: cs142models.exampleModel().name,
       counter: 0,
       inputValue: '',
       buttonWasClicked: '',
