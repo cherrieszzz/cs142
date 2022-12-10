@@ -1,6 +1,6 @@
 import React from 'react';
 import './States.css';
-
+import cs142models from '../../modelData/states';
 /**
  * Define States, a React componment of CS142 project #4 problem #2.  The model
  * data for this view (the state names) is available
@@ -9,7 +9,7 @@ import './States.css';
 class States extends React.Component {
   constructor(props) {
     super(props);
-    console.log('window.cs142models.statesModel()', window.cs142models.statesModel());
+    //console.log('window.cs142models.statesModel()', window.cs142models.statesModel());
   }
 
   state = {
@@ -30,7 +30,7 @@ class States extends React.Component {
   }
 
   getResults(str) {
-    var model = window.cs142models.statesModel();
+    var model = cs142models.statesModel();
     // 没有解决获取input值得问题，str应为input得值
     return this.getInsert(str, model);
   }

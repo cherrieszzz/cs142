@@ -69,3 +69,4 @@ cs142models.statesModel = function() {
    ];
 };
 
+export default cs142models

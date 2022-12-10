@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/main.css';
-import {  HashRouter, Route, Link } from 'react-router';
+import P5 from './components/p5/p5'
 
 ReactDOM.render(
-    <HashRouter>
-      <Route path="/states" component={States} />
-      <Route path="/example" component={Example} />
-  </HashRouter>
+  <P5 />
 ,  
   document.getElementById('reactapp'),
 );
