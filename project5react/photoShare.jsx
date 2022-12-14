@@ -35,7 +35,6 @@ class PhotoShare extends React.Component {
         </Grid>
         <Grid item sm={9}>
           <Paper className="cs142-main-grid-item">
-          <Link to='/users'>users</Link>
             <Switch>
             <Route exact path="/"
                 render={() => (

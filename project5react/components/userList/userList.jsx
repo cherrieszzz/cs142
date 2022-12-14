@@ -9,7 +9,9 @@ import {
   from '@material-ui/core';
 import './userList.css';
 import '../../modelData/photoApp'
-
+import {
+  Link
+} from 'react-router-dom';
 /**
  * Define UserList, a React componment of CS142 project #5
  */
@@ -23,7 +25,6 @@ class UserList extends React.Component {
   }
 
   render() {
-    console.log(this.state.Users);
     return (
       <div>
         {/* <Typography variant="body1">
@@ -37,7 +38,10 @@ class UserList extends React.Component {
               return (
                 <div key={value._id}>
                   <ListItem>
-                    <ListItemText primary={value.first_name + " " + value.last_name}/>
+                    <Link to={'/users/' + value._id}>
+                      <ListItemText primary={value.first_name + " " + value.last_name} />
+                    </Link>
+
                   </ListItem>
                   <Divider />
                 </div>
@@ -46,7 +50,7 @@ class UserList extends React.Component {
             })
           }
         </List>
-       {/*  <Typography variant="body1">
+        {/*  <Typography variant="body1">
           The model comes in from window.cs142models.userListModel()
         </Typography> */}
       </div>
