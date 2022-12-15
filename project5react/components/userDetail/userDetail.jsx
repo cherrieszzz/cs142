@@ -28,15 +28,19 @@ class UserDetail extends React.Component {
 
   render() {
     console.log(this.state.data)
+    const user = this.state.data
     return (
-      <Grid container
-      alignItems="center"
+      <div
       >
-        {
-          this.state.data.first_name
-        }
+        <ul>
+          <li>id:{user._id}</li>
+          <li>name:{user.first_name + user.last_name}</li>
+          <li>location:{user.location}</li>
+          <li>description:{user.description}</li>
+          <li>occupation:{user.occupation}</li>
+        </ul>
         <Link to={'/photos/' + this.state.data._id}>Photos</Link>
-      </Grid>
+      </div>
     );
   }
 }
