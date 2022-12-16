@@ -34,7 +34,7 @@ class UserDetail extends React.Component {
       >
         <ul>
           <li>id:{user._id}</li>
-          <li>name:{user.first_name + user.last_name}</li>
+          <li>name:{user.first_name +" " + user.last_name}</li>
           <li>location:{user.location}</li>
           <li>description:{user.description}</li>
           <li>occupation:{user.occupation}</li>

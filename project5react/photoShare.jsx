@@ -23,7 +23,7 @@ class PhotoShare extends React.Component {
     return (
       <HashRouter>
       <div>
-      <Grid container spacing={8}>
+      <Grid container>
         <Grid item xs={12}>
           <TopBar/>
         </Grid>
